@@ -2,7 +2,6 @@ package com.demoblaze;
 
 import com.demoblaze.Pages.CartPage;
 import com.demoblaze.Pages.StorePage;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

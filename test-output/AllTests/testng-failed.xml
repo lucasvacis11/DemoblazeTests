@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AllTests]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Regression(failed)">
+    <classes>
+      <class name="com.demoblaze.SuccessfulLoginTest">
+        <methods>
+          <include name="loginWithValidCredentials"/>
+          <include name="setUp"/>
+          <include name="signUpWithExistingUsername"/>
+          <include name="tearDown"/>
+          <include name="signUpWithValidDetails"/>
+          <include name="loginWithInvalidCredentials"/>
+        </methods>
+      </class> <!-- com.demoblaze.SuccessfulLoginTest -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [AllTests] -->

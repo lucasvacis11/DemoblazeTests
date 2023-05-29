@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.demoblaze.SuccessfulLoginTest">
+      <class name="com.demoblaze.LoginSignupTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="signUpWithValidDetails"/>
         </methods>
-      </class> <!-- com.demoblaze.SuccessfulLoginTest -->
+      </class> <!-- com.demoblaze.LoginSignupTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -13,26 +13,22 @@ public class SignUpPage extends BasePage {
 	public SignUpPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
-    By signUpModal = By.xpath("//div[@id='logInModal']//div[@class='modal-content']");
-	By signUpLink = By.id( "signin2");
-	By usernameField = By.id( "sign-username");
-	By passwordField = By.id( "sign-password");
-	By signUpButton = By.xpath( "//button[@onclick='register()']");
-    
+    public By signUpModal = By.xpath("//div[@id='logInModal']//div[@class='modal-content']");
+	public By signUpLink = By.xpath( "/html//a[@id='signin2']");
+    public By usernameField = By.xpath( "/html//input[@id='sign-username']");
+    public By passwordField = By.xpath( "/html//input[@id='sign-password']");
+    public By signUpButton = By.xpath( "//div[@id='signInModal']/div[@role='document']//div[@class='modal-footer']/button[2]");
 
-    public void signUp(String username, String password) {
+    public String signUp(String username, String password) {
     	doClick(signUpLink);
         doSendKeys(usernameField, username);
         doSendKeys(passwordField, password);
         doClick(signUpButton);
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        String alertText = alert.getText();
+        alert.accept();
+        return alertText;
     }
-
-    public void verifyAlertText (String expectedText) {
-        var actualText = driver.switchTo().alert().getText();
-        Assert.assertEquals(actualText, expectedText);
-    }
-
 
 }
 

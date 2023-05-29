@@ -1,34 +1,41 @@
 package com.demoblaze.Pages;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends BasePage {
 	
 	public LoginPage(WebDriver driver, WebDriverWait wait) {
 		super(driver, wait);
-		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy(id = "login2")
-	private WebElement loginHeaderButton;
 
-	@FindBy(id = "loginusername")
-	private WebElement usernameField;
+	public By loginHeaderButton = By.xpath("/html//a[@id='login2']");
 
-	@FindBy(id = "loginpassword")
-	private WebElement passwordField;
+	public By usernameField = By.xpath("/html//input[@id='loginusername']");
 
-	@FindBy(xpath = "//button[@onclick='logIn()']")
-	private WebElement loginButton;
+	public By passwordField = By.xpath("/html//input[@id='loginpassword']");
+
+	public By loginButton = By.xpath("//div[@id='logInModal']/div[@role='document']//div[@class='modal-footer']/button[2]");
+
+	public By logOutButton = By.xpath("/html//a[@id='logout2']");
 
 	public void login(String username, String password) {
-		loginHeaderButton.click();
-		usernameField.sendKeys(username);
-		passwordField.sendKeys(password);
-		loginButton.click();
+		doClick(loginHeaderButton);
+		doSendKeys(usernameField, username);
+		doSendKeys(passwordField, password);
+		doClick(loginButton);
+	}
+
+	public String verifyUserExistAlert() {
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+		String alertText = alert.getText();
+		alert.accept();
+		return alertText;
 	}
 }

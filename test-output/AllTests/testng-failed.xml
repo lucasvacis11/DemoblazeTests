@@ -3,7 +3,7 @@
 <suite name="Failed suite [AllTests]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Regression(failed)">
     <classes>
-      <class name="com.demoblaze.SuccessfulLoginTest">
+      <class name="com.demoblaze.LoginSignupTest">
         <methods>
           <include name="loginWithValidCredentials"/>
           <include name="setUp"/>
@@ -12,7 +12,7 @@
           <include name="signUpWithValidDetails"/>
           <include name="loginWithInvalidCredentials"/>
         </methods>
-      </class> <!-- com.demoblaze.SuccessfulLoginTest -->
+      </class> <!-- com.demoblaze.LoginSignupTest -->
     </classes>
   </test> <!-- Regression(failed) -->
 </suite> <!-- Failed suite [AllTests] -->

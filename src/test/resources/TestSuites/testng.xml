@@ -3,7 +3,9 @@
 <suite name="AllTests" verbose="1" >
   <test name="Regression" >
     <classes>
-       <class name="com.demoblaze.SuccessfulLoginTest"/>
+       <class name="com.demoblaze.LoginSignupTest"/>
+        <class name="com.demoblaze.CartTest"/>
+        <class name="com.demoblaze.ProductStoreTest"/>
     </classes>
   </test>
 </suite>

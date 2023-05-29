@@ -6,12 +6,12 @@
     <groups>
     </groups>
     <test started-at="2023-05-28T17:21:54Z" name="Default test" finished-at="2023-05-28T17:21:58Z" duration-ms="3641">
-      <class name="com.demoblaze.SuccessfulLoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.demoblaze.SuccessfulLoginTest@533bda92]" started-at="2023-05-28T17:21:54Z" name="setUp" finished-at="2023-05-28T17:21:58Z" duration-ms="3503" status="PASS">
+      <class name="com.demoblaze.LoginSignupTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.demoblaze.LoginSignupTest@533bda92]" started-at="2023-05-28T17:21:54Z" name="setUp" finished-at="2023-05-28T17:21:58Z" duration-ms="3503" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="signUpWithValidDetails()[pri:0, instance:com.demoblaze.SuccessfulLoginTest@533bda92]" started-at="2023-05-28T17:21:58Z" name="signUpWithValidDetails" finished-at="2023-05-28T17:21:58Z" duration-ms="4" status="FAIL">
+        <test-method signature="signUpWithValidDetails()[pri:0, instance:com.demoblaze.LoginSignupTest@533bda92]" started-at="2023-05-28T17:21:58Z" name="signUpWithValidDetails" finished-at="2023-05-28T17:21:58Z" duration-ms="4" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null]]>
@@ -19,7 +19,7 @@
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 at com.demoblaze.Pages.SignUpPage.<init>(SignUpPage.java:15)
-at com.demoblaze.SuccessfulLoginTest.signUpWithValidDetails(SuccessfulLoginTest.java:12)
+at com.demoblaze.LoginSignupTest.signUpWithValidDetails(SuccessfulLoginTest.java:12)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,11 +51,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpWithValidDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demoblaze.SuccessfulLoginTest@533bda92]" started-at="2023-05-28T17:21:58Z" name="tearDown" finished-at="2023-05-28T17:21:58Z" duration-ms="121" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demoblaze.LoginSignupTest@533bda92]" started-at="2023-05-28T17:21:58Z" name="tearDown" finished-at="2023-05-28T17:21:58Z" duration-ms="121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.demoblaze.SuccessfulLoginTest -->
+      </class> <!-- com.demoblaze.LoginSignupTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

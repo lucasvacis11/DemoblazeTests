@@ -11,10 +11,10 @@ public class SignUpPage extends BasePage {
 	public SignUpPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
-    public By signUpModal = By.xpath("//div[@id='logInModal']//div[@class='modal-content']");
-	public By signUpLink = By.xpath( "/html//a[@id='signin2']");
-    public By usernameField = By.xpath( "/html//input[@id='sign-username']");
-    public By passwordField = By.xpath( "/html//input[@id='sign-password']");
+    public By signUpModal = By.cssSelector("//div[@id='logInModal']//div[@class='modal-content']");
+	public By signUpLink = By.id( "signin2");
+    public By usernameField = By.id( "sign-username");
+    public By passwordField = By.id( "sign-password");
     public By signUpButton = By.xpath( "//div[@id='signInModal']/div[@role='document']//div[@class='modal-footer']/button[2]");
 
     public String signUp(String username, String password) {

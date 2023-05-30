@@ -31,15 +31,16 @@ public class BaseTest {
 	@AfterMethod
 	public void tearDown() {
 		try {
-
-			Thread.sleep(1000);
-			driver.quit();
+			if (driver != null) {
+				driver.quit();
+				driver = null;
+			}
 		} catch (Exception e) {
-
 			System.out.println("Exception in tearDown method: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
+
 
 	public void assertElementPresent(By locator) {
 		try {

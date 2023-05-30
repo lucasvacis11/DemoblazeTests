@@ -14,9 +14,9 @@ public class StorePage extends BasePage {
 
     public By firstProduct = By.xpath("//div[@id='tbodyid']/div[1]/div[@class='card h-100']/a[@href='prod.html?idp_=1']/img");
 
-    public By addToCartButton = By.xpath("/html//div[@id='tbodyid']//a[@href='#']");
+    public By addToCartButton = By.linkText("Add to cart");
 
-    public By cartNavigationButton = By.xpath("/html//a[@id='cartur']");
+    public By cartNavigationButton = By.id("cartur");
 
 
     public void clickFirstProduct() {

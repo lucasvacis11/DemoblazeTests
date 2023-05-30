@@ -13,16 +13,16 @@ public class CartPage extends BasePage {
         super(driver, wait);
     }
 
-    public By productNameInCart = By.xpath("//body[1]/div[6]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[2]");
-    public By deleteProductButton = By.xpath("/html//tbody[@id='tbodyid']//a[@href='#']");
+    public By productNameInCart = By.xpath("//tbody[@id='tbodyid']//td[.='Samsung galaxy s6']");
+    public By deleteProductButton = By.linkText("Delete");
     public By placeOrderbutton = By.xpath("/html//div[@id='page-wrapper']//button[@type='button']");
-    public By orderModal = By.xpath("//div[@id='orderModal']/div[@role='document']//div[@class='modal-body']");
-    public By nameField = By.xpath("/html//input[@id='name']");
-    public By countryField = By.xpath("/html//input[@id='country']");
-    public By cityField = By.xpath("/html//input[@id='city']");
-    public By cardField = By.xpath("/html//input[@id='card']");
-    public By monthField = By.xpath("/html//input[@id='month']");
-    public By yearField = By.xpath("/html//input[@id='year']");
+    public By orderModal = By.className("modal-body");
+    public By nameField = By.id("name");
+    public By countryField = By.id("country");
+    public By cityField = By.id("city");
+    public By cardField = By.id("card");
+    public By monthField = By.id("month");
+    public By yearField = By.id("year");
     public By purchaseButton = By.xpath("//div[@id='orderModal']/div[@role='document']//div[@class='modal-footer']/button[2]");
     public By purchaseConfirmationModal = By.xpath("/html/body/div[10]");
     public By okButtonPurchaseModal = By.xpath("/html/body/div[10]//button[.='OK']");
